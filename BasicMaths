@@ -16,6 +16,8 @@ class maths{
 		System.out.println("		B) Subtract");
 		System.out.println("		C) Multiply");
 		System.out.println("		D) Divide");
+		System.out.println("		E) Power");
+		System.out.println("		F) Factorial");
 		ans=in.next().toLowerCase();
 		
 		if (ans.equals("a")){
@@ -40,6 +42,25 @@ class maths{
 				divideXbyY(x,y);}
 			else{
 				divideYbyX(x,y);}
+		}
+		
+		else if (ans.equals("e")){
+			System.out.println("The first number to the power of the second? Y/N");
+			ans=in.next().toLowerCase();
+			if (ans.equals("y")){
+				XtopowerofY(x,y);}
+			else{
+				YtopowerofX(x,y);}
+		}
+		else if (ans.equals("f")){
+			System.out.println("Take factorial of first number? Y/N");
+			ans=in.next().toLowerCase();
+			if (ans.equals("y")){
+				double z = factorial(x);
+				System.out.println(z);}
+			else{
+				double z = factorial(x);
+				System.out.println(z);}
 		}
 	}
 		static void adding(double x, double y){
@@ -66,5 +87,19 @@ class maths{
 		double total = y*x;
 		System.out.println(total);
 		}
-		
+		static void XtopowerofY(double x, double y){
+			double total = Math.pow(x, y);
+			System.out.println(total);
+			}
+		static void YtopowerofX(double x, double y){
+			double total = Math.pow(y,x);
+			System.out.println(total);
+			}
+	    static double factorial(double x){
+	        int factorialnumbers=1;
+	        while(x>0){
+	         factorialnumbers=(int)(factorialnumbers*x--);   
+	        }
+	        return factorialnumbers;
+	    }
 }
