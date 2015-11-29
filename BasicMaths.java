@@ -43,7 +43,7 @@ class BasicMaths{
 			} else {
 				divide(y, x);
 			}
-		} else if (operation.equals("e")){
+		} else if (operation.equals("e")) {
 			System.out.println("The first number to the power of the second? Y/N");
 			operation=in.next().toLowerCase();
 			if (operation.equals("y")) {
@@ -51,10 +51,10 @@ class BasicMaths{
 			} else {
 				power(y, x);
 			}
-		} else if (operation.equals("f")){
+		} else if (operation.equals("f")) {
 			System.out.println("Take factorial of first number? Y/N");
 			operation = in.next().toLowerCase();
-			if (operation.equals("y")){
+			if (operation.equals("y")) {
 				System.out.println(factorial(x));
 			} else {
 				System.out.println(factorial(y));
