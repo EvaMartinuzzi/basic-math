@@ -96,10 +96,13 @@ class maths{
 			System.out.println(total);
 			}
 	    static double factorial(double x){
-	        int factorialnumbers=1;
-	        while(x>0){
-	         factorialnumbers=(int)(factorialnumbers*x--);   
+	    	int n = x-1;
+	        if (x==0||x==1){
+	          x = 1;
 	        }
-	        return factorialnumbers;
+	        else{
+	          x=x*factorial(n);
+	        }
+	        return x;
 	    }
 }
