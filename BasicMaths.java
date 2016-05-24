@@ -91,11 +91,14 @@ class BasicMaths{
 
   // Takes one double number and prints out the factorial of that number.
     static double factorial(double x) {
-        double factorialnumbers = 1;
-        while (x > 0) {
-            factorialnumbers = factorialnumbers * x--;
+        int n = x - 1;
+
+        if (x == 0 || x == 1) {
+            x = 1;
+        } else {
+            x = x * factorial(n);
         }
 
-        return factorialnumbers;
+        return x;
     }
 }
